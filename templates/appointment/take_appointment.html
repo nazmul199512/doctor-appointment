@@ -4,29 +4,38 @@
 
 {% block title %} Take Appointment {% endblock %}
 
+
+
 {% block content %}
-<div class="container">
+    <div class="container">
 
-<div class="row justify-content-center">
+        <div class="row justify-content-center">
 
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <center> <h3>Take Appointment </h3></center>
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <center><h3>Take Appointment </h3></center>
 
-                    <form action="" method="POST" >{% csrf_token %}
+                <form action="" method="POST">{% csrf_token %}
 
-                        {{ form|bootstrap }}
+                    {{ form|bootstrap }}
 
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <input type="submit" value="Submit" class="btn btn-primary btn-md text-white">
-                            </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <input onclick="myFunction()" type="submit" value="Submit"
+                                   class="btn btn-primary btn-md text-white">
                         </div>
+                    </div>
+                </form>
 
+                <script>
+                    function myFunction() {
+                        alert("Are you sure taking  this appointment?");
+                    }
 
-                    </form>
-                </div>
-
+                </script>
             </div>
+
         </div>
+    </div>
 
 {% endblock %}
+
