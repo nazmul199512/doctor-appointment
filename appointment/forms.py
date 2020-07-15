@@ -6,7 +6,7 @@ class CreateAppointmentForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(CreateAppointmentForm, self).__init__(*args, **kwargs)
         self.fields['full_name'].label = "Full Name"
-        self.fields['image'].label = "Image"
+
         self.fields['department'].label = "Department"
         self.fields['start_time'].label = "Start Time"
         self.fields['hospital_name'].label = "Hospital Name"
@@ -61,7 +61,7 @@ class CreateAppointmentForm(forms.ModelForm):
 
     class Meta:
         model = Appointment
-        fields = ['full_name', 'image', 'department', 'start_time', 'end_time', 'location',
+        fields = ['full_name', 'department', 'start_time', 'end_time', 'location',
                   'hospital_name', 'qualification_name', 'institute_name']
 
     def is_valid(self):
