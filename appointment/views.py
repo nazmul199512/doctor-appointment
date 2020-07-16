@@ -201,5 +201,5 @@ class SearchView(ListView):
     context_object_name = 'appointment'
 
     def get_queryset(self):
-        return self.model.objects.filter(location__contains=self.request.GET['location'],
+        return self.model.objects.filter(location__icontains=self.request.GET['location'],
                                          department__contains=self.request.GET['department'])
