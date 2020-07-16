@@ -39,7 +39,7 @@ class TakeAppointment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100)
-    phone_number = models.CharField(max_length=120)
+    m_phone_number = models.CharField(max_length=120)
     message = models.TextField()
     date = models.DateTimeField(default=timezone.now)
 

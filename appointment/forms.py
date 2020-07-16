@@ -84,7 +84,7 @@ class TakeAppointmentForm(forms.ModelForm):
         super(TakeAppointmentForm, self).__init__(*args, **kwargs)
         self.fields['appointment'].label = "Choose Your Doctor"
         self.fields['full_name'].label = "Full Name"
-        self.fields['phone_number'].label = "Phone Number"
+        self.fields['m_phone_number'].label = "Phone Number"
         self.fields['message'].label = "Message"
 
         self.fields['appointment'].widget.attrs.update(
@@ -99,7 +99,7 @@ class TakeAppointmentForm(forms.ModelForm):
             }
         )
 
-        self.fields['phone_number'].widget.attrs.update(
+        self.fields['m_phone_number'].widget.attrs.update(
             {
                 'placeholder': 'Enter Phone Number',
             }
@@ -112,7 +112,7 @@ class TakeAppointmentForm(forms.ModelForm):
 
     class Meta:
         model = TakeAppointment
-        fields = ['appointment', 'full_name', 'phone_number', 'message']
+        fields = ['appointment', 'full_name', 'm_phone_number', 'message']
 
     def is_valid(self):
         valid = super(TakeAppointmentForm, self).is_valid()
