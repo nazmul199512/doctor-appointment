@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="73912942-dabc-42a9-8bf8-bba489082763" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/appointment/appointment_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/appointment/appointment_confirm_delete.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594647967385</updated>
       <workItem from="1594647972686" duration="5390000" />
-      <workItem from="1594823389746" duration="2528000" />
+      <workItem from="1594823389746" duration="3122000" />
     </task>
     <servers />
   </component>
@@ -68,6 +67,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="61" key="FileChooserDialogImpl" timestamp="1594856949979">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="61" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594856949979" />
     <state x="314" y="146" key="com.intellij.ide.util.TipDialog" timestamp="1594823472368">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
