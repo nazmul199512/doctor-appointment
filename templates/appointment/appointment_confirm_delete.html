@@ -17,7 +17,7 @@
                 <form method="post" enctype="multipart/form-data">{% csrf_token %}
 
 
-                    <img style="height: 400px; width: 450px" src="{% static 'img/doctor-icon-avatar-white_136162-58.jpg' %}" alt="">
+                    <img style="height: 400px; width: 450px" src="{{ object.image.url  }}" alt="">
                     </br>
                     </br>
                     <center><input class="btn btn-danger" type="submit" value="Delete">

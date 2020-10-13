@@ -52,7 +52,7 @@
                 <nav class="classy-navbar justify-content-between" id="dentoNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="{% url 'appointment:home' %}"><img src="{% static 'img/logo1.png' %}" alt="">
+                    <a class="nav-brand" href="{% url 'appointment:home' %}"><img src="{% static 'img/logo.png' %}" alt="">
                     </a>
 
                     <!-- Navbar Toggler -->
@@ -77,7 +77,12 @@
                                 <li><a href="{% url 'appointment:home' %}">Home</a></li>
 
 
-                                <li><a href="{% url 'appointment:service' %}">Services</a></li>
+                                 <li><a href="#">Services</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'appointment:ambulance' %}"> AMBULANCE</a></li>
+                                            <li><a href="{% url 'appointment:lab-test' %}"> LAB TEST</a></li>
+                                        </ul>
+                                    </li>
 
 
                                 {% if request.user.is_authenticated and request.user.role == 'doctor' %}

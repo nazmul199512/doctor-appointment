@@ -11,7 +11,7 @@ from django.views.generic import TemplateView, UpdateView, CreateView, ListView,
 from django.views.generic.edit import DeleteView, UpdateView
 from accounts.forms import PatientProfileUpdateForm, DoctorProfileUpdateForm
 from .forms import CreateAppointmentForm, TakeAppointmentForm
-from .models import Appointment, TakeAppointment
+from .models import *
 
 """
 For Patient Profile
@@ -190,8 +190,33 @@ class HomePageView(ListView):
         return self.model.objects.all().order_by('-id')
 
 
-class ServiceView(TemplateView):
-    template_name = 'appointment/service.html'
+class AmbulanceView(ListView):
+    paginate_by = 9
+    model = Ambulance
+    context_object_name = 'ambulance'
+    template_name = "ambulance/ambulance.html"
+
+    def get_queryset(self):
+        return self.model.objects.all().order_by('-id')
+
+
+class AmbulanceSearchView(ListView):
+
+    model = Ambulance
+    template_name = 'ambulance/search_ambulance.html'
+    context_object_name = 'search'
+
+    def get_queryset(self):
+        return self.model.objects.filter(location__icontains=self.request.GET['location'])
+
+
+class LabTestView(ListView):
+    model = LabTest
+    context_object_name = 'lab_test'
+    template_name = "ambulance/lab_test_list.html"
+
+    def get_queryset(self):
+        return self.model.objects.all().order_by('-id')
 
 
 class SearchView(ListView):

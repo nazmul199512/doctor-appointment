@@ -61,7 +61,7 @@ class CreateAppointmentForm(forms.ModelForm):
 
     class Meta:
         model = Appointment
-        fields = ['full_name', 'department', 'start_time', 'end_time', 'location',
+        fields = ['full_name', 'image', 'department', 'start_time', 'end_time', 'location',
                   'hospital_name', 'qualification_name', 'institute_name']
 
     def is_valid(self):

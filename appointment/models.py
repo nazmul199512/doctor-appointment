@@ -45,3 +45,22 @@ class TakeAppointment(models.Model):
 
     def __str__(self):
         return self.full_name
+
+
+class Ambulance(models.Model):
+    title = models.CharField(max_length=120)
+    location = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='media')
+    phone_number = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+
+class LabTest(models.Model):
+    name = models.CharField(max_length=50)
+    fee = models.IntegerField()
+    image = models.ImageField(upload_to='media')
+
+    def __str__(self):
+        return self.name

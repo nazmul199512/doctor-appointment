@@ -30,3 +30,5 @@ class User(AbstractUser):
         return self.email
 
     objects = UserManager()
+
+

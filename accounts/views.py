@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect
 from django.views.generic import CreateView, FormView, RedirectView
 from accounts.forms import *
 from accounts.models import User
+from .models import *
+from django.views.generic import TemplateView, UpdateView, CreateView, ListView
 
 
 class RegisterPatientView(CreateView):
@@ -115,3 +117,5 @@ class LogoutView(RedirectView):
         auth.logout(request)
         messages.success(request, 'You are now logged out')
         return super(LogoutView, self).get(request, *args, **kwargs)
+
+
